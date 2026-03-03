@@ -1,1 +1,236 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <title>Prata do Corte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <style>
+    /* RESET & BASE */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #0f172a;
+      color: #fff;
+      text-align: center;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* HERO COM FUNDO DE BARBEARIA */
+    .hero {
+      position: relative;
+      height: 100vh;
+      background: url('https://i.postimg.cc/8cTjGf4c/barbearia-background.jpg') center center/cover no-repeat; /* imagem temática de barbearia */
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero img, .hero h1, .hero p, .btn {
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero .logo {
+      width: 200px;
+      margin-bottom: 20px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+    }
+
+    .hero h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+
+    .btn {
+      background-color: #22c55e;
+      padding: 15px 30px;
+      border-radius: 8px;
+      font-weight: bold;
+      transition: 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #16a34a;
+      transform: scale(1.05);
+    }
+
+    /* SEÇÕES */
+    section {
+      padding: 60px 20px;
+    }
+
+    h2 {
+      font-size: 36px;
+      margin-bottom: 30px;
+      color: #22c55e;
+    }
+
+    p {
+      font-size: 18px;
+      opacity: 0.85;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    /* SOBRE */
+    .sobre {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
+    }
+
+    /* SERVIÇOS */
+    .cards {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .card {
+      background-color: #1e293b;
+      padding: 25px;
+      border-radius: 12px;
+      width: 250px;
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
+    }
+
+    /* GALERIA / PORTFÓLIO */
+    .portfolio {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    .portfolio-item {
+      background-color: #1e293b;
+      padding: 15px;
+      border-radius: 12px;
+      width: 280px;
+      transition: 0.3s;
+    }
+
+    .portfolio-item img {
+      width: 100%;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .portfolio-item img:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+    }
+
+    .portfolio-item h3 {
+      margin-top: 10px;
+      font-size: 20px;
+    }
+
+    .portfolio-item p {
+      font-size: 14px;
+      opacity: 0.8;
+    }
+
+    /* CONTATO */
+    .contato a {
+      color: #22c55e;
+      font-weight: bold;
+    }
+
+    /* FOOTER */
+    footer {
+      padding: 30px;
+      background-color: #1e293b;
+      opacity: 0.8;
+      font-size: 14px;
+    }
+
+    /* RESPONSIVO */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 36px; }
+      .card, .portfolio-item { width: 90%; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <img src="https://i.postimg.cc/RFkR86dw/0D9986D3-DA6F-461D-BE57-99CEE90745D0.png" alt="Logo Prata do Corte" class="logo">
+    <h1>Prata do Corte</h1>
+    <p>Cortes profissionais, estilo moderno e atendimento de qualidade.</p>
+    <a href="#contato" class="btn">Agende seu horário</a>
+  </header>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <h2>Sobre Nós</h2>
+    <p>Na Prata do Corte, combinamos tradição e tecnologia para oferecer cortes modernos e personalizados. Nosso time é especializado em estilo e atendimento de excelência.</p>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section id="servicos">
+    <h2>Serviços</h2>
+    <div class="cards">
+      <div class="card">Corte Masculino</div>
+      <div class="card">Barba e Bigode</div>
+      <div class="card">Design de Sobrancelha</div>
+      <div class="card">Corte Infantil</div>
+    </div>
+  </section>
+
+  <!-- GALERIA -->
+  <section class="galeria" id="galeria">
+    <h2>Galeria</h2>
+    <div class="portfolio">
+      <div class="portfolio-item">
+        <img src="https://i.postimg.cc/MKgNyHVf/0EADCB6B-35A1-4708-838C-4B9BCB686A0A.png" alt="Corte Profissional">
+        <h3>Corte Profissional</h3>
+        <p>Exemplo de corte moderno e estiloso realizado pela equipe.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://i.postimg.cc/V6M0nxzk/474D2A74-24F8-466E-AC79-765A34020F72.png" alt="Barba Estilizada">
+        <h3>Barba Estilizada</h3>
+        <p>Design de barba preciso, garantindo estilo e elegância.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <h2>Contato</h2>
+    <p>WhatsApp: <a href="https://wa.me/5513996068418" target="_blank">Clique aqui</a></p>
+    <p>Email: contato@pratadocorte.com</p>
+    <p>Endereço: Rua Exemplo, 123, Sua Cidade</p>
+  </section>
+
+  <footer>
+    © 2026 Prata do Corte - Todos os direitos reservados.
+  </footer>
+
+</body>
+</html>

@@ -6,207 +6,179 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+html{
+  scroll-behavior:smooth;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  background-color: #0f172a;
-  color: #fff;
-  text-align: center;
+body{
+  font-family:Arial, sans-serif;
+  background-color:#0f172a;
+  color:#fff;
+  text-align:center;
 }
 
-/* MENU FIXO */
-nav {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  background: rgba(15,23,42,0.95);
-  backdrop-filter: blur(10px);
-  display: flex;
-  justify-content: center;
-  gap: 40px;
-  padding: 15px 0;
-  z-index: 1000;
-  box-shadow: 0 5px 20px rgba(0,0,0,0.5);
+/* MENU */
+nav{
+  position:fixed;
+  top:0;
+  width:100%;
+  background:rgba(0,0,0,0.85);
+  backdrop-filter:blur(8px);
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  padding:15px 0;
+  z-index:1000;
 }
 
-nav a {
-  color: #fff;
-  font-weight: bold;
-  transition: 0.3s;
+nav a{
+  color:#fff;
+  font-weight:bold;
+  transition:0.3s;
 }
 
-nav a:hover {
-  color: #22c55e;
+nav a:hover{
+  color:#d4af37;
 }
 
 /* HERO */
-.hero {
-  height: 100vh;
-  background: url('https://i.postimg.cc/8cTjGf4c/barbearia-background.jpg') center center/cover no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 80px;
+.hero{
+  height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+  url("https://images.unsplash.com/photo-1512690459411-b9245aed614b?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding-top:80px;
 }
 
-.logo {
-  width: 200px;
-  margin-bottom: 20px;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+.logo{
+  width:180px;
+  margin-bottom:20px;
+  filter:drop-shadow(0 0 15px rgba(212,175,55,0.7));
 }
 
-.hero h1 {
-  font-size: 50px;
+.hero h1{
+  font-size:52px;
+  letter-spacing:2px;
 }
 
-.hero p {
-  margin: 20px 0;
-  font-size: 20px;
-  max-width: 600px;
+.hero p{
+  margin:20px 0;
+  font-size:20px;
+  max-width:600px;
 }
 
-/* BOTÃO */
-.btn {
-  background: linear-gradient(45deg,#22c55e,#16a34a);
-  padding: 15px 35px;
-  border-radius: 50px;
-  font-weight: bold;
-  transition: 0.3s;
-  display: inline-block;
+.btn{
+  background:linear-gradient(45deg,#d4af37,#b8860b);
+  padding:15px 40px;
+  border-radius:50px;
+  font-weight:bold;
+  transition:0.3s;
+  display:inline-block;
 }
 
-.btn:hover {
-  transform: scale(1.08);
-  box-shadow: 0 10px 25px rgba(34,197,94,0.5);
+.btn:hover{
+  transform:scale(1.08);
+  box-shadow:0 10px 30px rgba(212,175,55,0.6);
 }
 
 /* SEÇÕES */
-section {
-  padding: 100px 20px;
-  opacity: 0;
-  transform: translateY(40px);
-  transition: all 0.8s ease;
+section{
+  padding:100px 20px;
+  opacity:0;
+  transform:translateY(40px);
+  transition:0.8s;
 }
 
-section.show {
-  opacity: 1;
-  transform: translateY(0);
+section.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
-h2 {
-  font-size: 36px;
-  margin-bottom: 30px;
-  color: #22c55e;
+h2{
+  font-size:36px;
+  margin-bottom:30px;
+  color:#d4af37;
 }
 
-.sobre, #agendamento {
-  background: linear-gradient(135deg,#1e293b,#0f172a);
+.sobre,#agendamento{
+  background:linear-gradient(135deg,#111,#1e293b);
 }
 
 /* CARDS */
-.cards {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+.cards{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
-.card {
-  background-color: #1e293b;
-  padding: 25px;
-  border-radius: 15px;
-  width: 250px;
-  transition: 0.3s;
+.card{
+  background:#1e293b;
+  padding:25px;
+  border-radius:15px;
+  width:250px;
+  transition:0.3s;
 }
 
-.card:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+.card:hover{
+  transform:translateY(-10px);
+  box-shadow:0 20px 40px rgba(0,0,0,0.6);
 }
 
 /* GALERIA */
-.portfolio {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
+.portfolio{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  flex-wrap:wrap;
 }
 
-.portfolio-item {
-  width: 280px;
+.portfolio-item{
+  width:280px;
 }
 
-.portfolio-item img {
-  width: 100%;
-  border-radius: 15px;
-  transition: 0.3s;
+.portfolio-item img{
+  width:100%;
+  border-radius:15px;
+  transition:0.3s;
 }
 
-.portfolio-item img:hover {
-  transform: scale(1.05);
+.portfolio-item img:hover{
+  transform:scale(1.05);
 }
 
-/* CONTATO */
-.contato a {
-  color: #22c55e;
-  font-weight: bold;
+/* WHATSAPP */
+.whatsapp-float{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  width:60px;
+  height:60px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  font-size:28px;
+  color:#fff;
+  box-shadow:0 10px 25px rgba(0,0,0,0.5);
+  z-index:1000;
 }
 
-/* FOOTER */
-footer {
-  padding: 30px;
-  background-color: #1e293b;
-  font-size: 14px;
-}
-
-/* BOTÃO WHATSAPP FLUTUANTE */
-.whatsapp-float {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  background-color: #25D366;
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 30px;
-  color: white;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-  z-index: 1000;
-  transition: 0.3s;
-}
-
-.whatsapp-float:hover {
-  transform: scale(1.1);
-}
-
-/* RESPONSIVO */
-@media(max-width:768px){
-  nav {
-    gap: 15px;
-    font-size: 14px;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-  .card {
-    width: 90%;
-  }
+footer{
+  padding:30px;
+  background:#111;
+  font-size:14px;
 }
 </style>
 </head>
@@ -222,22 +194,23 @@ footer {
 </nav>
 
 <header class="hero">
-  <img src="https://i.postimg.cc/RFkR86dw/0D9986D3-DA6F-461D-BE57-99CEE90745D0.png" class="logo">
+  <!-- LOGO BARBEARIA -->
+  <img class="logo" src="https://cdn-icons-png.flaticon.com/512/921/921347.png" alt="Logo Barbearia">
   <h1>Prata do Corte</h1>
-  <p>Cortes profissionais, estilo moderno e atendimento de qualidade.</p>
+  <p>Cortes profissionais, estilo moderno e atendimento de alto padrão.</p>
   <a href="#agendamento" class="btn">Agende seu horário</a>
 </header>
 
 <section class="sobre" id="sobre">
   <h2>Sobre Nós</h2>
-  <p>Na Prata do Corte, combinamos tradição e tecnologia para oferecer cortes modernos e personalizados.</p>
+  <p>Unimos tradição e modernidade para entregar cortes personalizados com excelência e estilo.</p>
 </section>
 
 <section id="servicos">
   <h2>Serviços</h2>
   <div class="cards">
     <div class="card">Corte Masculino</div>
-    <div class="card">Barba e Bigode</div>
+    <div class="card">Barba Premium</div>
     <div class="card">Design de Sobrancelha</div>
     <div class="card">Corte Infantil</div>
   </div>
@@ -247,10 +220,10 @@ footer {
   <h2>Galeria</h2>
   <div class="portfolio">
     <div class="portfolio-item">
-      <img src="https://i.postimg.cc/MKgNyHVf/0EADCB6B-35A1-4708-838C-4B9BCB686A0A.png">
+      <img src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=800&auto=format&fit=crop">
     </div>
     <div class="portfolio-item">
-      <img src="https://i.postimg.cc/V6M0nxzk/474D2A74-24F8-466E-AC79-765A34020F72.png">
+      <img src="https://images.unsplash.com/photo-1585747860715-2ba37e788b70?q=80&w=800&auto=format&fit=crop">
     </div>
   </div>
 </section>
@@ -263,7 +236,7 @@ footer {
   </div>
 </section>
 
-<section class="contato" id="contato">
+<section id="contato">
   <h2>Contato</h2>
   <p>Email: contato@pratadocorte.com</p>
 </section>
@@ -272,20 +245,16 @@ footer {
 © 2026 Prata do Corte - Todos os direitos reservados.
 </footer>
 
-<a href="https://wa.me/5513996068418" target="_blank" class="whatsapp-float">
-  💬
-</a>
+<a href="https://wa.me/5513996068418" target="_blank" class="whatsapp-float">💬</a>
 
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 <script>
-const sections = document.querySelectorAll("section");
-
-window.addEventListener("scroll", () => {
-  sections.forEach(section => {
-    const sectionTop = section.getBoundingClientRect().top;
-    if(sectionTop < window.innerHeight - 100){
-      section.classList.add("show");
+const sections=document.querySelectorAll("section");
+window.addEventListener("scroll",()=>{
+  sections.forEach(sec=>{
+    if(sec.getBoundingClientRect().top<window.innerHeight-100){
+      sec.classList.add("show");
     }
   });
 });

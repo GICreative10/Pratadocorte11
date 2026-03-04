@@ -5,7 +5,7 @@
 <title>Prata do Corte</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Ícone oficial do WhatsApp -->
+<!-- WhatsApp Icon -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
 <style>
@@ -16,86 +16,79 @@ body{font-family:Arial,sans-serif;background:#0f172a;color:#fff;text-align:cente
 /* MENU */
 nav{
   position:fixed;top:0;width:100%;
-  background:rgba(0,0,0,0.95);
+  background:#000;
   display:flex;justify-content:center;gap:30px;
   padding:15px 0;z-index:1000;
 }
-nav a{
-  color:#fff;font-weight:bold;text-decoration:none;
-  transition:.3s;
-}
+nav a{color:#fff;text-decoration:none;font-weight:bold;}
 nav a:hover{color:#d4af37;}
 
 /* HERO */
 .hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
-  padding-top:80px;
+  height:100vh;display:flex;
+  justify-content:center;align-items:center;
+  position:relative;overflow:hidden;padding-top:80px;
 }
 .hero::before{
-  content:"";
-  position:absolute;
-  width:120%;
-  height:120%;
+  content:"";position:absolute;width:120%;height:120%;
   background:url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
-  animation:zoomSlow 20s infinite alternate ease-in-out;
-  z-index:-2;
+  animation:zoom 20s infinite alternate ease-in-out;z-index:-2;
 }
 .hero::after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.85));
-  z-index:-1;
+  content:"";position:absolute;width:100%;height:100%;
+  background:rgba(0,0,0,.75);z-index:-1;
 }
-@keyframes zoomSlow{
-  from{transform:scale(1);}
-  to{transform:scale(1.1);}
-}
+@keyframes zoom{from{transform:scale(1);}to{transform:scale(1.1);}}
 
 .hero-content{max-width:800px;}
-.hero h1{font-size:48px;letter-spacing:2px;}
+.hero h1{font-size:48px;}
 .hero p{margin:20px 0;font-size:20px;}
-
 .btn{
   background:linear-gradient(45deg,#d4af37,#b8860b);
-  padding:15px 40px;
-  border-radius:50px;
-  font-weight:bold;
-  text-decoration:none;
-  display:inline-block;
-  transition:.3s;
-}
-.btn:hover{
-  transform:scale(1.08);
-  box-shadow:0 10px 30px rgba(212,175,55,.6);
+  padding:15px 40px;border-radius:50px;
+  text-decoration:none;font-weight:bold;color:#000;
 }
 
 /* SEÇÕES */
 section{padding:100px 20px;}
 h2{font-size:36px;margin-bottom:40px;color:#d4af37;}
-.sobre,#agendamento{background:#111827;}
 
-/* SERVIÇOS */
-.cards{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
+/* COMO FUNCIONA */
+.como{
+  background:#f3f3f3;color:#000;
+  max-width:800px;margin:100px auto;
+  padding:50px;border-radius:20px;
 }
-.card{
-  background:#1f2937;
-  padding:25px;
-  border-radius:15px;
-  width:250px;
+.step{margin-bottom:30px;text-align:left;}
+.step strong{font-size:20px;display:block;margin-bottom:5px;}
+
+/* SERVIÇOS ESTILO APP */
+.servicos-app{
+  background:#fff;color:#000;
+  padding:80px 20px;
+}
+.card-app{
+  max-width:600px;margin:20px auto;
+  background:#f5f5f5;
+  padding:25px;border-radius:20px;
+  text-align:left;
   transition:.3s;
+  border:2px solid transparent;
 }
-.card:hover{transform:translateY(-10px);}
+.card-app:hover{
+  border-color:#000;
+  transform:translateY(-5px);
+}
+.card-app h3{margin-bottom:10px;}
+.card-app p{color:#555;margin-bottom:10px;}
+
+.botao-agendar{
+  display:block;
+  max-width:600px;margin:40px auto;
+  background:#000;color:#fff;
+  padding:18px;border-radius:15px;
+  text-decoration:none;font-weight:bold;
+}
 
 /* GALERIA */
 .galeria-grid{
@@ -103,68 +96,32 @@ h2{font-size:36px;margin-bottom:40px;color:#d4af37;}
   grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
   gap:25px;
 }
-
 .galeria-item{
-  position:relative;
-  overflow:hidden;
-  border-radius:15px;
+  position:relative;overflow:hidden;border-radius:15px;
 }
-
 .galeria-item img{
-  width:100%;
-  height:350px;
-  object-fit:cover;
+  width:100%;height:350px;object-fit:cover;
   transition:.5s;
 }
-
-.galeria-item:hover img{
-  transform:scale(1.1);
-}
-
+.galeria-item:hover img{transform:scale(1.1);}
 .legenda{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  background:rgba(0,0,0,0.75);
-  padding:15px;
-  font-weight:bold;
-  font-size:18px;
+  position:absolute;bottom:0;width:100%;
+  background:rgba(0,0,0,.7);padding:15px;
 }
 
 /* WHATSAPP */
 .whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:32px;
-  color:#fff;
+  position:fixed;bottom:20px;right:20px;
+  background:#25D366;width:65px;height:65px;
+  border-radius:50%;display:flex;
+  justify-content:center;align-items:center;
+  font-size:32px;color:#fff;
   box-shadow:0 10px 25px rgba(0,0,0,.5);
-  z-index:1000;
-  transition:0.3s;
+  transition:.3s;
 }
+.whatsapp-float:hover{transform:scale(1.1);}
 
-.whatsapp-float:hover{
-  transform:scale(1.1);
-}
-
-footer{
-  padding:30px;
-  background:#0f172a;
-  font-size:14px;
-}
-
-@media(max-width:768px){
-  nav{gap:15px;font-size:14px;}
-  .hero h1{font-size:32px;}
-  .card{width:90%;}
-}
+footer{padding:30px;background:#000;}
 </style>
 </head>
 
@@ -172,54 +129,76 @@ footer{
 
 <nav>
   <a href="#sobre">Sobre</a>
-  <a href="#servicos">Serviços</a>
+  <a href="#servicos-app">Serviços</a>
   <a href="#galeria">Galeria</a>
   <a href="#agendamento">Agendamento</a>
-  <a href="#contato">Contato</a>
 </nav>
 
 <header class="hero">
   <div class="hero-content">
     <h1>Prata do Corte</h1>
-    <p>Cortes modernos, estilo americano e atendimento premium.</p>
-    <a href="#agendamento" class="btn">Agende seu horário</a>
+    <p>Cortes modernos com padrão americano premium.</p>
+    <a href="#servicos-app" class="btn">Agendar Agora</a>
   </div>
 </header>
 
-<section class="sobre" id="sobre">
-  <h2>Sobre Nós</h2>
-  <p>Especialistas em cortes modernos masculinos, trazendo o melhor da barbearia americana para você.</p>
+<section class="como">
+  <h2>Como Funciona</h2>
+  <div class="step">
+    <strong>1️⃣ Identifique-se</strong>
+    Digite seu nome e telefone.
+  </div>
+  <div class="step">
+    <strong>2️⃣ Escolha o Serviço</strong>
+    Selecione cabelo, barba ou combo.
+  </div>
+  <div class="step">
+    <strong>3️⃣ Marque seu Horário</strong>
+    Escolha o melhor dia e horário.
+  </div>
 </section>
 
-<section id="servicos">
-  <h2>Serviços</h2>
-  <div class="cards">
-    <div class="card">Corte Masculino</div>
-    <div class="card">Barba Premium</div>
-    <div class="card">Degradê (Fade)</div>
-    <div class="card">Pigmentação</div>
+<section id="servicos-app" class="servicos-app">
+  <h2>Escolha o Serviço</h2>
+
+  <div class="card-app">
+    <h3>Cabelo</h3>
+    <p>Corte masculino personalizado</p>
+    <strong>30 min</strong>
   </div>
+
+  <div class="card-app">
+    <h3>Cabelo + Barba</h3>
+    <p>Corte completo + modelagem</p>
+    <strong>1h</strong>
+  </div>
+
+  <div class="card-app">
+    <h3>Barba</h3>
+    <p>Aparar e modelar barba</p>
+    <strong>30 min</strong>
+  </div>
+
+  <a href="#agendamento" class="botao-agendar">
+    Realizar Agendamento
+  </a>
 </section>
 
 <section id="galeria">
   <h2>Cortes Modernos</h2>
   <div class="galeria-grid">
-
     <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg" alt="Low Fade Americano">
+      <img src="https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg">
       <div class="legenda">Low Fade Americano</div>
     </div>
-
     <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/2068672/pexels-photo-2068672.jpeg" alt="Pompadour Moderno">
+      <img src="https://images.pexels.com/photos/2068672/pexels-photo-2068672.jpeg">
       <div class="legenda">Pompadour Moderno</div>
     </div>
-
     <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg" alt="Textured Crop com Degradê">
-      <div class="legenda">Textured Crop com Degradê</div>
+      <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg">
+      <div class="legenda">Textured Crop</div>
     </div>
-
   </div>
 </section>
 
@@ -231,13 +210,8 @@ footer{
   </div>
 </section>
 
-<section id="contato">
-  <h2>Contato</h2>
-  <p>WhatsApp: <a href="https://wa.me/5513996068418" target="_blank">Clique aqui</a></p>
-</section>
-
 <footer>
-© 2026 Prata do Corte - Todos os direitos reservados.
+© 2026 Prata do Corte
 </footer>
 
 <a href="https://wa.me/5513996068418" target="_blank" class="whatsapp-float">

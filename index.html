@@ -6,159 +6,117 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-}
-
-html{
-  scroll-behavior:smooth;
-}
-
-body{
-  font-family:Arial, sans-serif;
-  background:#0f172a;
-  color:#fff;
-  text-align:center;
-}
+*{margin:0;padding:0;box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{font-family:Arial,sans-serif;background:#0f172a;color:#fff;text-align:center;}
 
 /* MENU */
 nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:rgba(0,0,0,0.9);
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:15px 0;
-  z-index:1000;
+  position:fixed;top:0;width:100%;
+  background:rgba(0,0,0,0.95);
+  display:flex;justify-content:center;gap:30px;
+  padding:15px 0;z-index:1000;
 }
-
 nav a{
-  color:#fff;
-  font-weight:bold;
+  color:#fff;font-weight:bold;text-decoration:none;
   transition:.3s;
 }
+nav a:hover{color:#d4af37;}
 
-nav a:hover{
-  color:#d4af37;
-}
-
-/* HERO MODERNO COM MOVIMENTO */
+/* HERO */
 .hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  overflow:hidden;
+  height:100vh;display:flex;
+  justify-content:center;align-items:center;
+  position:relative;overflow:hidden;
   padding-top:80px;
 }
-
 .hero::before{
-  content:"";
-  position:absolute;
-  width:120%;
-  height:120%;
-  background:url("https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
-  animation: zoomSlow 20s infinite alternate ease-in-out;
+  content:"";position:absolute;width:120%;height:120%;
+  background:url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
+  animation:zoomSlow 20s infinite alternate ease-in-out;
   z-index:-2;
 }
-
 .hero::after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
+  content:"";position:absolute;width:100%;height:100%;
   background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.85));
   z-index:-1;
 }
-
 @keyframes zoomSlow{
   from{transform:scale(1);}
   to{transform:scale(1.1);}
 }
-
-.hero-content{
-  max-width:800px;
-}
-
-.hero h1{
-  font-size:48px;
-  letter-spacing:2px;
-}
-
-.hero p{
-  margin:20px 0;
-  font-size:20px;
-}
-
-/* BOTÃO PREMIUM */
+.hero-content{max-width:800px;}
+.hero h1{font-size:48px;letter-spacing:2px;}
+.hero p{margin:20px 0;font-size:20px;}
 .btn{
   background:linear-gradient(45deg,#d4af37,#b8860b);
-  padding:15px 40px;
-  border-radius:50px;
-  font-weight:bold;
-  display:inline-block;
-  transition:.3s;
+  padding:15px 40px;border-radius:50px;
+  font-weight:bold;text-decoration:none;
+  display:inline-block;transition:.3s;
 }
-
 .btn:hover{
   transform:scale(1.08);
   box-shadow:0 10px 30px rgba(212,175,55,.6);
 }
 
 /* SEÇÕES */
-section{
-  padding:100px 20px;
-}
+section{padding:100px 20px;}
+h2{font-size:36px;margin-bottom:40px;color:#d4af37;}
+.sobre,#agendamento{background:#111827;}
 
-h2{
-  font-size:36px;
-  margin-bottom:30px;
-  color:#d4af37;
-}
-
-.sobre,#agendamento{
-  background:#111827;
-}
-
-/* CARDS */
+/* SERVIÇOS */
 .cards{
-  display:flex;
-  justify-content:center;
-  gap:20px;
-  flex-wrap:wrap;
+  display:flex;justify-content:center;
+  gap:20px;flex-wrap:wrap;
 }
-
 .card{
   background:#1f2937;
-  padding:25px;
-  border-radius:15px;
-  width:250px;
-  transition:.3s;
+  padding:25px;border-radius:15px;
+  width:250px;transition:.3s;
+}
+.card:hover{transform:translateY(-10px);}
+
+/* GALERIA CORTES */
+.galeria-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
 
-.card:hover{
-  transform:translateY(-10px);
+.galeria-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:15px;
+}
+
+.galeria-item img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.galeria-item:hover img{
+  transform:scale(1.1);
+}
+
+.legenda{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:rgba(0,0,0,0.75);
+  padding:15px;
+  font-weight:bold;
+  font-size:18px;
 }
 
 /* WHATSAPP */
 .whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  width:60px;
-  height:60px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:28px;
-  color:#fff;
+  position:fixed;bottom:20px;right:20px;
+  background:#25D366;width:60px;height:60px;
+  border-radius:50%;display:flex;
+  justify-content:center;align-items:center;
+  font-size:28px;color:#fff;
   box-shadow:0 10px 25px rgba(0,0,0,.5);
   z-index:1000;
 }
@@ -169,10 +127,9 @@ footer{
   font-size:14px;
 }
 
-/* RESPONSIVO */
 @media(max-width:768px){
   nav{gap:15px;font-size:14px;}
-  .hero h1{font-size:34px;}
+  .hero h1{font-size:32px;}
   .card{width:90%;}
 }
 </style>
@@ -183,6 +140,7 @@ footer{
 <nav>
   <a href="#sobre">Sobre</a>
   <a href="#servicos">Serviços</a>
+  <a href="#galeria">Galeria</a>
   <a href="#agendamento">Agendamento</a>
   <a href="#contato">Contato</a>
 </nav>
@@ -190,14 +148,14 @@ footer{
 <header class="hero">
   <div class="hero-content">
     <h1>Prata do Corte</h1>
-    <p>Cortes profissionais, estilo moderno e atendimento de alto padrão.</p>
+    <p>Cortes modernos, estilo americano e atendimento premium.</p>
     <a href="#agendamento" class="btn">Agende seu horário</a>
   </div>
 </header>
 
 <section class="sobre" id="sobre">
   <h2>Sobre Nós</h2>
-  <p>Unimos tradição e modernidade para entregar cortes personalizados com excelência.</p>
+  <p>Especialistas em cortes modernos masculinos, trazendo o melhor da barbearia americana para você.</p>
 </section>
 
 <section id="servicos">
@@ -205,8 +163,30 @@ footer{
   <div class="cards">
     <div class="card">Corte Masculino</div>
     <div class="card">Barba Premium</div>
-    <div class="card">Design de Sobrancelha</div>
-    <div class="card">Corte Infantil</div>
+    <div class="card">Degradê (Fade)</div>
+    <div class="card">Pigmentação</div>
+  </div>
+</section>
+
+<section id="galeria">
+  <h2>Cortes Modernos</h2>
+  <div class="galeria-grid">
+
+    <div class="galeria-item">
+      <img src="https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg" alt="Low Fade Americano">
+      <div class="legenda">Low Fade Americano</div>
+    </div>
+
+    <div class="galeria-item">
+      <img src="https://images.pexels.com/photos/2068672/pexels-photo-2068672.jpeg" alt="Pompadour Moderno">
+      <div class="legenda">Pompadour Moderno</div>
+    </div>
+
+    <div class="galeria-item">
+      <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg" alt="Textured Crop com Degradê">
+      <div class="legenda">Textured Crop com Degradê</div>
+    </div>
+
   </div>
 </section>
 
@@ -220,7 +200,7 @@ footer{
 
 <section id="contato">
   <h2>Contato</h2>
-  <p>Email: contato@pratadocorte.com</p>
+  <p>WhatsApp: <a href="https://wa.me/5513996068418" target="_blank">Clique aqui</a></p>
 </section>
 
 <footer>

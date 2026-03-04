@@ -44,7 +44,6 @@ nav a:hover{color:#d4af37;}
   justify-content:center;
   align-items:center;
   position:relative;
-  overflow:hidden;
   padding-top:80px;
 }
 .hero::before{
@@ -69,17 +68,14 @@ nav a:hover{color:#d4af37;}
   to{transform:scale(1.1);}
 }
 
-.hero-content{max-width:900px;}
-
 .logos{
   display:flex;
   justify-content:center;
-  align-items:center;
   gap:40px;
   margin-bottom:30px;
 }
 .logos img{
-  width:140px;
+  width:130px;
   border-radius:15px;
   background:#fff;
   padding:10px;
@@ -97,26 +93,42 @@ nav a:hover{color:#d4af37;}
   color:#000;
 }
 
-/* BARBEIROS */
-.barbeiros{
+/* GALERIA */
+#galeria{
   padding:100px 20px;
   background:#111827;
 }
-.barbeiros-grid{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:40px;
+
+.galeria-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:25px;
 }
-.barbeiro-card{
-  background:#1f2937;
-  padding:30px;
-  border-radius:20px;
-  width:300px;
+
+.galeria-item{
+  position:relative;
+  overflow:hidden;
+  border-radius:15px;
 }
-.barbeiro-card h3{
-  color:#d4af37;
-  margin-bottom:10px;
+
+.galeria-item img{
+  width:100%;
+  height:350px;
+  object-fit:cover;
+  transition:.5s;
+}
+
+.galeria-item:hover img{
+  transform:scale(1.1);
+}
+
+.legenda{
+  position:absolute;
+  bottom:0;
+  width:100%;
+  background:rgba(0,0,0,.7);
+  padding:15px;
+  font-weight:bold;
 }
 
 /* AGENDAMENTO */
@@ -130,6 +142,28 @@ nav a:hover{color:#d4af37;}
   max-width:900px;
 }
 
+/* WHATSAPP BOTÕES */
+.whats-box{
+  margin-top:25px;
+}
+
+.whats-btn{
+  display:inline-flex;
+  align-items:center;
+  gap:10px;
+  background:#25D366;
+  color:#fff;
+  padding:12px 25px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  transition:.3s;
+}
+
+.whats-btn:hover{
+  transform:scale(1.05);
+}
+
 footer{
   padding:30px;
   background:#000;
@@ -140,57 +174,75 @@ footer{
 <body>
 
 <nav>
-  <a href="#barbeiros">Barbeiros</a>
+  <a href="#galeria">Galeria</a>
   <a href="#agendamento">Agendamento</a>
 </nav>
 
 <header class="hero">
-  <div class="hero-content">
-
+  <div>
     <div class="logos">
       <img src="https://i.postimg.cc/SRMKrX69/4bd8b221-efb4-4bfb-b60b-ce1a9a9e586e.jpg">
       <img src="https://i.postimg.cc/GtyF6xwn/fb64fae1-13c3-4982-8ad6-dce4c6f86acc.jpg">
     </div>
-
     <h1>Prata Cortes & Maciel Silva</h1>
     <p>Dois profissionais, um padrão de excelência.</p>
-    <a href="#agendamento" class="btn">Agendar Horário</a>
-
+    <a href="#agendamento" class="btn">Agendar Agora</a>
   </div>
 </header>
 
-<section id="barbeiros" class="barbeiros">
-  <h2>Nossos Barbeiros</h2>
+<section id="galeria">
+  <h2 style="color:#d4af37;margin-bottom:50px;">Cortes Modernos</h2>
 
-  <div class="barbeiros-grid">
-    <div class="barbeiro-card">
-      <h3>Prata Cortes</h3>
-      <p>Especialista em cortes modernos e degradês americanos.</p>
+  <div class="galeria-grid">
+    <div class="galeria-item">
+      <img src="https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg">
+      <div class="legenda">Low Fade Americano</div>
     </div>
-
-    <div class="barbeiro-card">
-      <h3>Maciel Silva</h3>
-      <p>Especialista em barba, acabamento e estilo personalizado.</p>
+    <div class="galeria-item">
+      <img src="https://images.pexels.com/photos/2068672/pexels-photo-2068672.jpeg">
+      <div class="legenda">Pompadour Moderno</div>
+    </div>
+    <div class="galeria-item">
+      <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg">
+      <div class="legenda">Textured Crop</div>
     </div>
   </div>
 </section>
 
 <section id="agendamento">
-  <h2>Escolha seu Barbeiro</h2>
+  <h2 style="color:#d4af37;">Agende com Seu Barbeiro</h2>
 
+  <!-- PRATA -->
   <div class="agenda-box">
-    <h3 style="color:#d4af37;">Agenda - Prata Cortes</h3>
+    <h3 style="color:#d4af37;">Prata Cortes</h3>
+
     <div class="calendly-inline-widget"
          data-url="https://calendly.com/valdemirveiiga/agendamento---prata-do-corte"
          style="min-width:320px;height:700px;">
     </div>
+
+    <div class="whats-box">
+      <a href="https://wa.me/5513996068418" target="_blank" class="whats-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+        Falar com Prata
+      </a>
+    </div>
   </div>
 
+  <!-- MACIEL -->
   <div class="agenda-box">
-    <h3 style="color:#d4af37;">Agenda - Maciel Silva</h3>
+    <h3 style="color:#d4af37;">Maciel Silva</h3>
+
     <div class="calendly-inline-widget"
-         data-url="COLE_AQUI_LINK_DA_AGENDA_DO_MACIEL"
+         data-url="COLE_AQUI_AGENDA_MACIEL"
          style="min-width:320px;height:700px;">
+    </div>
+
+    <div class="whats-box">
+      <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank" class="whats-btn">
+        <i class="fa-brands fa-whatsapp"></i>
+        Falar com Maciel
+      </a>
     </div>
   </div>
 

@@ -6,7 +6,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* RESET & BASE */
     * {
       margin: 0;
       padding: 0;
@@ -18,6 +17,7 @@
       background-color: #0f172a;
       color: #fff;
       text-align: center;
+      scroll-behavior: smooth;
     }
 
     a {
@@ -25,21 +25,15 @@
       color: inherit;
     }
 
-    /* HERO COM FUNDO DE BARBEARIA */
+    /* HERO */
     .hero {
       position: relative;
       height: 100vh;
-      background: url('https://i.postimg.cc/8cTjGf4c/barbearia-background.jpg') center center/cover no-repeat; /* imagem temática de barbearia */
+      background: url('https://i.postimg.cc/8cTjGf4c/barbearia-background.jpg') center center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-    }
-
-    .hero img, .hero h1, .hero p, .btn {
-      position: relative;
-      z-index: 2;
     }
 
     .hero .logo {
@@ -66,6 +60,7 @@
       border-radius: 8px;
       font-weight: bold;
       transition: 0.3s;
+      display: inline-block;
     }
 
     .btn:hover {
@@ -73,7 +68,6 @@
       transform: scale(1.05);
     }
 
-    /* SEÇÕES */
     section {
       padding: 60px 20px;
     }
@@ -91,12 +85,10 @@
       margin: 0 auto;
     }
 
-    /* SOBRE */
     .sobre {
       background: linear-gradient(135deg, #1e293b, #0f172a);
     }
 
-    /* SERVIÇOS */
     .cards {
       display: flex;
       justify-content: center;
@@ -117,7 +109,6 @@
       box-shadow: 0px 15px 30px rgba(0,0,0,0.5);
     }
 
-    /* GALERIA / PORTFÓLIO */
     .portfolio {
       display: flex;
       justify-content: center;
@@ -136,8 +127,7 @@
     .portfolio-item img {
       width: 100%;
       border-radius: 12px;
-      cursor: pointer;
-      transition: transform 0.3s, box-shadow 0.3s;
+      transition: 0.3s;
     }
 
     .portfolio-item img:hover {
@@ -145,23 +135,16 @@
       box-shadow: 0 10px 25px rgba(0,0,0,0.5);
     }
 
-    .portfolio-item h3 {
-      margin-top: 10px;
-      font-size: 20px;
+    /* AGENDAMENTO */
+    #agendamento {
+      background: linear-gradient(135deg, #1e293b, #0f172a);
     }
 
-    .portfolio-item p {
-      font-size: 14px;
-      opacity: 0.8;
-    }
-
-    /* CONTATO */
     .contato a {
       color: #22c55e;
       font-weight: bold;
     }
 
-    /* FOOTER */
     footer {
       padding: 30px;
       background-color: #1e293b;
@@ -169,7 +152,6 @@
       font-size: 14px;
     }
 
-    /* RESPONSIVO */
     @media (max-width: 768px) {
       .hero h1 { font-size: 36px; }
       .card, .portfolio-item { width: 90%; }
@@ -183,7 +165,7 @@
     <img src="https://i.postimg.cc/RFkR86dw/0D9986D3-DA6F-461D-BE57-99CEE90745D0.png" alt="Logo Prata do Corte" class="logo">
     <h1>Prata do Corte</h1>
     <p>Cortes profissionais, estilo moderno e atendimento de qualidade.</p>
-    <a href="#contato" class="btn">Agende seu horário</a>
+    <a href="#agendamento" class="btn">Agende seu horário</a>
   </header>
 
   <!-- SOBRE -->
@@ -220,6 +202,17 @@
     </div>
   </section>
 
+  <!-- AGENDAMENTO -->
+  <section id="agendamento">
+    <h2>Agende Seu Horário</h2>
+    <p>Escolha o melhor dia e horário para você. Atendimento rápido, prático e 100% online.</p>
+
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/valdemirveiiga/agendamento---prata-do-corte"
+         style="min-width:320px;height:750px;margin-top:30px;">
+    </div>
+  </section>
+
   <!-- CONTATO -->
   <section class="contato" id="contato">
     <h2>Contato</h2>
@@ -231,6 +224,9 @@
   <footer>
     © 2026 Prata do Corte - Todos os direitos reservados.
   </footer>
+
+  <!-- SCRIPT CALENDLY -->
+  <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 
 </body>
 </html>

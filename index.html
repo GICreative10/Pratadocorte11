@@ -3,9 +3,8 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Prata do Corte</title>
+<title>Prata Cortes & Maciel Silva</title>
 
-<!-- Font Awesome CORRETO -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
 <style>
@@ -69,8 +68,24 @@ nav a:hover{color:#d4af37;}
   from{transform:scale(1);}
   to{transform:scale(1.1);}
 }
-.hero-content{max-width:800px;}
-.hero h1{font-size:48px;}
+
+.hero-content{max-width:900px;}
+
+.logos{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:40px;
+  margin-bottom:30px;
+}
+.logos img{
+  width:140px;
+  border-radius:15px;
+  background:#fff;
+  padding:10px;
+}
+
+.hero h1{font-size:42px;}
 .hero p{margin:20px 0;font-size:20px;}
 
 .btn{
@@ -82,122 +97,37 @@ nav a:hover{color:#d4af37;}
   color:#000;
 }
 
-/* SEÇÕES */
-section{padding:100px 20px;}
-h2{font-size:36px;margin-bottom:40px;color:#d4af37;}
-
-/* COMO FUNCIONA */
-.como{
-  background:#f3f3f3;
-  color:#000;
-  max-width:800px;
-  margin:100px auto;
-  padding:50px;
+/* BARBEIROS */
+.barbeiros{
+  padding:100px 20px;
+  background:#111827;
+}
+.barbeiros-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:40px;
+}
+.barbeiro-card{
+  background:#1f2937;
+  padding:30px;
   border-radius:20px;
+  width:300px;
 }
-.step{
-  margin-bottom:30px;
-  text-align:left;
-}
-.step strong{
-  font-size:20px;
-  display:block;
-  margin-bottom:5px;
-}
-
-/* SERVIÇOS */
-.servicos-app{
-  background:#fff;
-  color:#000;
-}
-.card-app{
-  max-width:600px;
-  margin:20px auto;
-  background:#f5f5f5;
-  padding:25px;
-  border-radius:20px;
-  text-align:left;
-  transition:.3s;
-  border:2px solid transparent;
-}
-.card-app:hover{
-  border-color:#000;
-  transform:translateY(-5px);
-}
-.card-app h3{margin-bottom:10px;}
-.card-app p{color:#555;margin-bottom:10px;}
-
-.botao-agendar{
-  display:block;
-  max-width:600px;
-  margin:40px auto;
-  background:#000;
-  color:#fff;
-  padding:18px;
-  border-radius:15px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
-}
-.botao-agendar:hover{
-  background:#d4af37;
-  color:#000;
-}
-
-/* GALERIA */
-.galeria-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
-}
-.galeria-item{
-  position:relative;
-  overflow:hidden;
-  border-radius:15px;
-}
-.galeria-item img{
-  width:100%;
-  height:350px;
-  object-fit:cover;
-  transition:.5s;
-}
-.galeria-item:hover img{
-  transform:scale(1.1);
-}
-.legenda{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  background:rgba(0,0,0,.7);
-  padding:15px;
-  font-weight:bold;
+.barbeiro-card h3{
+  color:#d4af37;
+  margin-bottom:10px;
 }
 
 /* AGENDAMENTO */
 #agendamento{
-  background:#111827;
+  padding:100px 20px;
+  background:#000;
 }
 
-/* WHATSAPP OFICIAL */
-.whatsapp-float{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  width:65px;
-  height:65px;
-  border-radius:50%;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  font-size:32px;
-  color:#fff;
-  box-shadow:0 10px 25px rgba(0,0,0,.5);
-  transition:.3s;
-  text-decoration:none;
-}
-.whatsapp-float:hover{
-  transform:scale(1.1);
+.agenda-box{
+  margin:60px auto;
+  max-width:900px;
 }
 
 footer{
@@ -210,96 +140,65 @@ footer{
 <body>
 
 <nav>
-  <a href="#sobre">Sobre</a>
-  <a href="#servicos-app">Serviços</a>
-  <a href="#galeria">Galeria</a>
+  <a href="#barbeiros">Barbeiros</a>
   <a href="#agendamento">Agendamento</a>
 </nav>
 
 <header class="hero">
   <div class="hero-content">
-    <h1>Prata do Corte</h1>
-    <p>Cortes modernos com padrão americano premium.</p>
-    <a href="#servicos-app" class="btn">Agendar Agora</a>
+
+    <div class="logos">
+      <img src="https://i.postimg.cc/SRMKrX69/4bd8b221-efb4-4bfb-b60b-ce1a9a9e586e.jpg">
+      <img src="https://i.postimg.cc/GtyF6xwn/fb64fae1-13c3-4982-8ad6-dce4c6f86acc.jpg">
+    </div>
+
+    <h1>Prata Cortes & Maciel Silva</h1>
+    <p>Dois profissionais, um padrão de excelência.</p>
+    <a href="#agendamento" class="btn">Agendar Horário</a>
+
   </div>
 </header>
 
-<section class="como">
-  <h2>Como Funciona</h2>
-  <div class="step">
-    <strong>1️⃣ Identifique-se</strong>
-    Digite seu nome e telefone.
-  </div>
-  <div class="step">
-    <strong>2️⃣ Escolha o Serviço</strong>
-    Selecione cabelo, barba ou combo.
-  </div>
-  <div class="step">
-    <strong>3️⃣ Marque seu Horário</strong>
-    Escolha o melhor dia e horário.
-  </div>
-</section>
+<section id="barbeiros" class="barbeiros">
+  <h2>Nossos Barbeiros</h2>
 
-<section id="servicos-app" class="servicos-app">
-  <h2>Escolha o Serviço</h2>
-
-  <div class="card-app">
-    <h3>Cabelo</h3>
-    <p>Corte masculino personalizado</p>
-    <strong>30 min</strong>
-  </div>
-
-  <div class="card-app">
-    <h3>Cabelo + Barba</h3>
-    <p>Corte completo + modelagem</p>
-    <strong>1h</strong>
-  </div>
-
-  <div class="card-app">
-    <h3>Barba</h3>
-    <p>Aparar e modelar barba</p>
-    <strong>30 min</strong>
-  </div>
-
-  <a href="#agendamento" class="botao-agendar">
-    Realizar Agendamento
-  </a>
-</section>
-
-<section id="galeria">
-  <h2>Cortes Modernos</h2>
-  <div class="galeria-grid">
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg">
-      <div class="legenda">Low Fade Americano</div>
+  <div class="barbeiros-grid">
+    <div class="barbeiro-card">
+      <h3>Prata Cortes</h3>
+      <p>Especialista em cortes modernos e degradês americanos.</p>
     </div>
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/2068672/pexels-photo-2068672.jpeg">
-      <div class="legenda">Pompadour Moderno</div>
-    </div>
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg">
-      <div class="legenda">Textured Crop</div>
+
+    <div class="barbeiro-card">
+      <h3>Maciel Silva</h3>
+      <p>Especialista em barba, acabamento e estilo personalizado.</p>
     </div>
   </div>
 </section>
 
 <section id="agendamento">
-  <h2>Agende Seu Horário</h2>
-  <div class="calendly-inline-widget"
-       data-url="https://calendly.com/valdemirveiiga/agendamento---prata-do-corte"
-       style="min-width:320px;height:750px;">
+  <h2>Escolha seu Barbeiro</h2>
+
+  <div class="agenda-box">
+    <h3 style="color:#d4af37;">Agenda - Prata Cortes</h3>
+    <div class="calendly-inline-widget"
+         data-url="https://calendly.com/valdemirveiiga/agendamento---prata-do-corte"
+         style="min-width:320px;height:700px;">
+    </div>
   </div>
+
+  <div class="agenda-box">
+    <h3 style="color:#d4af37;">Agenda - Maciel Silva</h3>
+    <div class="calendly-inline-widget"
+         data-url="COLE_AQUI_LINK_DA_AGENDA_DO_MACIEL"
+         style="min-width:320px;height:700px;">
+    </div>
+  </div>
+
 </section>
 
 <footer>
-© 2026 Prata do Corte
+© 2026 Prata Cortes & Maciel Silva
 </footer>
-
-<!-- BOTÃO WHATSAPP CORRETO -->
-<a href="https://wa.me/5513996068418" target="_blank" class="whatsapp-float">
-  <i class="fa-brands fa-whatsapp"></i>
-</a>
 
 <script src="https://assets.calendly.com/assets/external/widget.js" async></script>
 

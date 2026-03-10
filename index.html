@@ -10,163 +10,183 @@
 <style>
 *{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
+
 body{
-  font-family:Arial, sans-serif;
-  background:#0f172a;
-  color:#fff;
-  text-align:center;
+font-family:Arial, sans-serif;
+background:#0f172a;
+color:#fff;
+text-align:center;
 }
 
 /* MENU */
+
 nav{
-  position:fixed;
-  top:0;
-  width:100%;
-  background:#000;
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  padding:15px 0;
-  z-index:1000;
+position:fixed;
+top:0;
+width:100%;
+background:#000;
+display:flex;
+justify-content:center;
+gap:30px;
+padding:15px 0;
+z-index:1000;
 }
+
 nav a{
-  color:#fff;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
+color:#fff;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
 }
-nav a:hover{color:#d4af37;}
+
+nav a:hover{
+color:#d4af37;
+}
 
 /* HERO */
+
 .hero{
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  position:relative;
-  padding-top:80px;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+position:relative;
+padding-top:80px;
 }
+
 .hero::before{
-  content:"";
-  position:absolute;
-  width:120%;
-  height:120%;
-  background:url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
-  animation:zoom 20s infinite alternate ease-in-out;
-  z-index:-2;
+content:"";
+position:absolute;
+width:120%;
+height:120%;
+background:url("https://images.unsplash.com/photo-1622286342621-4bd786c2447c?q=80&w=2070&auto=format&fit=crop") center/cover no-repeat;
+animation:zoom 20s infinite alternate ease-in-out;
+z-index:-2;
 }
+
 .hero::after{
-  content:"";
-  position:absolute;
-  width:100%;
-  height:100%;
-  background:rgba(0,0,0,.75);
-  z-index:-1;
+content:"";
+position:absolute;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.75);
+z-index:-1;
 }
+
 @keyframes zoom{
-  from{transform:scale(1);}
-  to{transform:scale(1.1);}
+from{transform:scale(1);}
+to{transform:scale(1.1);}
 }
 
 .logos{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  margin-bottom:30px;
-}
-.logos img{
-  width:130px;
-  border-radius:15px;
-  background:#fff;
-  padding:10px;
+display:flex;
+justify-content:center;
+gap:40px;
+margin-bottom:30px;
 }
 
-.hero h1{font-size:42px;}
-.hero p{margin:20px 0;font-size:20px;}
+.logos img{
+width:130px;
+border-radius:15px;
+background:#fff;
+padding:10px;
+}
+
+.hero h1{
+font-size:42px;
+}
+
+.hero p{
+margin:20px 0;
+font-size:20px;
+}
 
 .btn{
-  background:linear-gradient(45deg,#d4af37,#b8860b);
-  padding:15px 40px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-  color:#000;
+background:linear-gradient(45deg,#d4af37,#b8860b);
+padding:15px 40px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+color:#000;
 }
 
 /* GALERIA */
+
 #galeria{
-  padding:100px 20px;
-  background:#111827;
+padding:100px 20px;
+background:#111827;
 }
 
 .galeria-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:25px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
 }
 
 .galeria-item{
-  position:relative;
-  overflow:hidden;
-  border-radius:15px;
+position:relative;
+overflow:hidden;
+border-radius:15px;
 }
 
 .galeria-item img{
-  width:100%;
-  height:350px;
-  object-fit:cover;
-  transition:.5s;
+width:100%;
+height:350px;
+object-fit:cover;
+transition:.5s;
 }
 
 .galeria-item:hover img{
-  transform:scale(1.1);
+transform:scale(1.1);
 }
 
 .legenda{
-  position:absolute;
-  bottom:0;
-  width:100%;
-  background:rgba(0,0,0,.7);
-  padding:15px;
-  font-weight:bold;
+position:absolute;
+bottom:0;
+width:100%;
+background:rgba(0,0,0,.7);
+padding:15px;
+font-weight:bold;
 }
 
 /* AGENDAMENTO */
+
 #agendamento{
-  padding:100px 20px;
-  background:#000;
+padding:100px 20px;
+background:#000;
 }
 
 .agenda-box{
-  margin:60px auto;
-  max-width:900px;
+margin:60px auto;
+max-width:900px;
 }
 
-/* WHATSAPP BOTÕES */
+/* WHATSAPP */
+
 .whats-box{
-  margin-top:25px;
+margin-top:25px;
 }
 
 .whats-btn{
-  display:inline-flex;
-  align-items:center;
-  gap:10px;
-  background:#25D366;
-  color:#fff;
-  padding:12px 25px;
-  border-radius:50px;
-  text-decoration:none;
-  font-weight:bold;
-  transition:.3s;
+display:inline-flex;
+align-items:center;
+gap:10px;
+background:#25D366;
+color:#fff;
+padding:12px 25px;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+transition:.3s;
 }
 
 .whats-btn:hover{
-  transform:scale(1.05);
+transform:scale(1.05);
 }
 
 footer{
-  padding:30px;
-  background:#000;
+padding:30px;
+background:#000;
 }
 </style>
 </head>
@@ -174,77 +194,93 @@ footer{
 <body>
 
 <nav>
-  <a href="#galeria">Galeria</a>
-  <a href="#agendamento">Agendamento</a>
+<a href="#galeria">Galeria</a>
+<a href="#agendamento">Agendamento</a>
 </nav>
 
 <header class="hero">
-  <div>
-    <div class="logos">
-      <img src="https://i.postimg.cc/SRMKrX69/4bd8b221-efb4-4bfb-b60b-ce1a9a9e586e.jpg">
-      <img src="https://i.postimg.cc/GtyF6xwn/fb64fae1-13c3-4982-8ad6-dce4c6f86acc.jpg">
-    </div>
-    <h1>Prata Cortes & Maciel Silva</h1>
-    <p>Dois profissionais, um padrão de excelência.</p>
-    <a href="#agendamento" class="btn">Agendar Agora</a>
-  </div>
+<div>
+
+<div class="logos">
+<img src="https://i.postimg.cc/SRMKrX69/4bd8b221-efb4-4bfb-b60b-ce1a9a9e586e.jpg">
+<img src="https://i.postimg.cc/GtyF6xwn/fb64fae1-13c3-4982-8ad6-dce4c6f86acc.jpg">
+</div>
+
+<h1>Prata Cortes & Maciel Silva</h1>
+<p>Dois profissionais, um padrão de excelência.</p>
+
+<a href="#agendamento" class="btn">Agendar Agora</a>
+
+</div>
 </header>
 
 <section id="galeria">
-  <h2 style="color:#d4af37;margin-bottom:50px;">Cortes Modernos</h2>
 
-  <div class="galeria-grid">
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/1805600/pexels-photo-1805600.jpeg">
-      <div class="legenda">Low Fade Americano</div>
-    </div>
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/2068672/pexels-photo-2068672.jpeg">
-      <div class="legenda">Pompadour Moderno</div>
-    </div>
-    <div class="galeria-item">
-      <img src="https://images.pexels.com/photos/3993449/pexels-photo-3993449.jpeg">
-      <div class="legenda">Textured Crop</div>
-    </div>
-  </div>
+<h2 style="color:#d4af37;margin-bottom:50px;">Cortes Modernos</h2>
+
+<div class="galeria-grid">
+
+<div class="galeria-item">
+<img src="https://images.unsplash.com/photo-1621605815971-fbc98d665033">
+<div class="legenda">Corte + Luzes</div>
+</div>
+
+<div class="galeria-item">
+<img src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a">
+<div class="legenda">Corte Nevou (Platinado)</div>
+</div>
+
+<div class="galeria-item">
+<img src="https://images.unsplash.com/photo-1622296089863-eb7fc530daa8">
+<div class="legenda">Degradê Moderno</div>
+</div>
+
+</div>
 </section>
 
 <section id="agendamento">
-  <h2 style="color:#d4af37;">Agende com Seu Barbeiro</h2>
 
-  <!-- PRATA -->
-  <div class="agenda-box">
-    <h3 style="color:#d4af37;">Prata Cortes</h3>
+<h2 style="color:#d4af37;">Agende com Seu Barbeiro</h2>
 
-    <div class="calendly-inline-widget"
-         data-url="https://calendly.com/valdemirveiiga/agendamento---prata-do-corte"
-         style="min-width:320px;height:700px;">
-    </div>
+<!-- PRATA -->
 
-    <div class="whats-box">
-      <a href="https://wa.me/5513996068418" target="_blank" class="whats-btn">
-        <i class="fa-brands fa-whatsapp"></i>
-        Falar com Prata
-      </a>
-    </div>
-  </div>
+<div class="agenda-box">
 
-  <!-- MACIEL -->
-  <div class="agenda-box">
-    <h3 style="color:#d4af37;">Maciel Silva</h3>
+<h3 style="color:#d4af37;">Prata Cortes</h3>
 
-    <div class="calendly-inline-widget"
-         data-url="COLE_AQUI_AGENDA_MACIEL"
-         style="min-width:320px;height:700px;">
-    </div>
+<div class="calendly-inline-widget"
+data-url="https://calendly.com/valdemirveiiga/agendamento---prata-do-corte"
+style="min-width:320px;height:700px;">
+</div>
 
-    <div class="whats-box">
-      <a href="https://wa.me/55SEUNUMEROAQUI" target="_blank" class="whats-btn">
-        <i class="fa-brands fa-whatsapp"></i>
-        Falar com Maciel
-      </a>
-    </div>
-  </div>
+<div class="whats-box">
+<a href="https://wa.me/5513996506980" target="_blank" class="whats-btn">
+<i class="fa-brands fa-whatsapp"></i>
+Falar com Prata
+</a>
+</div>
+
+</div>
+
+<!-- MACIEL -->
+
+<div class="agenda-box">
+
+<h3 style="color:#d4af37;">Maciel Silva</h3>
+
+<div class="calendly-inline-widget"
+data-url="COLE_AQUI_AGENDA_MACIEL"
+style="min-width:320px;height:700px;">
+</div>
+
+<div class="whats-box">
+<a href="https://wa.me/5513996803416" target="_blank" class="whats-btn">
+<i class="fa-brands fa-whatsapp"></i>
+Falar com Maciel
+</a>
+</div>
+
+</div>
 
 </section>
 
